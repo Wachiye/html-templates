@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>E-Commerce Dashboard</title>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <header class="admin-header">
+            <div class="nav-toggler">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="search">
+                <form class="form-inline" action="#" name="search-form" id='search-form'>
+                    <input type="search" class="form-control" id="search" name="search"
+                    placeholder="Search">
+                    <button type="submit" class="btn search-btn"  id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="notifications">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" title="Pending Orders">
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="New Customers">
+                            <i class="fa fa-user-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="Unread Messages">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="./images/user.png" alt="">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="admin-nav">
+            <div class="nav-header">
+                <h1>E-COMMERCE</h1>
+                <div class="nav-close">
+                    <i class="fa fa-close"></i>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <h3>Dashboards</h3>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Products</a>
+                </li>
+                <h3>Products</h3>
+                <li class="nav-item active">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Discounts</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Products</a>
+                </li>
+                <h3>Category</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-object-group"></i>
+                    <a href="#">View Categories</a>
+                </li>
+                <h3>Orders</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Draft Order</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cogs"></i>
+                    <a href="#">Process Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Orders</a>
+                </li>
+                <h3>Payments & Shipping</h3>
+                <li class="nav-item">
+                    <i class="fa fa-bank"></i>
+                    <a href="#">Payments</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-ship"></i>
+                    <a href="#">Shipping</a>
+                </li>
+                <h3>Suppliers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-user"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Users</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Customers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Customers</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Customer</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-heartbeat"></i>
+                    <a href="#">Customer Wishlists</a>
+                </li>
+                <h3>Reports</h3>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Stock Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cart-plus"></i>
+                    <a href="#">Order Reports</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="card">
+                            <div class="card-header bg-transparent">
+                                <h5>Add New Product</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="nav nav-pills list-inline">
+                                    <li class="nav-item active list-inline-item" >
+                                        <a href="#basic-info" class="nav-link" >Basic Info</a>
+                                    </li>
+                                    <li class="nav-item list-inline-item" >
+                                        <a href="#stocking" class="nav-link" >Stocking</a>
+                                    </li>
+                                    <li class="nav-item list-inline-item" >
+                                        <a href="#pricing" class="nav-link" >Pricing</a>
+                                    </li>
+                                    <li class="nav-item list-inline-item" >
+                                        <a href="#desc" class="nav-link" >Description</a>
+                                    </li>
+                                    <li class="nav-item list-inline-item" >
+                                        <a href="#images" class="nav-link" >Images</a>
+                                    </li>
+                                </ul>
+                                <div class="py-3 px-2">
+                                    <form action="">
+                                        <div id="basic-info" class="mb-3 py-2">
+                                            <h4 class="text-primary">Basic Information</h4>
+                                           <p class="lead">This section includes basic information about your product
+                                               such as name, category, sku no, vender ksu no, unit measurement, weight,
+                                               gender relation, region and supplier details
+                                           </p>
+                                           <div class="form-group">
+                                               <label for="product_name">Product Name</label>
+                                               <input type="text" name="product_name" id="product_name" class="form-control" 
+                                               placeholder="Product Name">
+                                           </div>
+                                           <div class="form-group">
+                                                <label for="product_cat ">Product Category</label>
+                                                <select name="product_category" id="product_category" class="form-control form-control-sm">
+                                                    <option value="" selected disabled>Category</option>
+                                                    <option value="shoes">Shoes</option>
+                                                    <option value="beddings">Beddings</option>
+                                                    <option value="grocery">Grocery</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                               <label for="product_sku">Product SKU</label>
+                                               <input type="text" name="product_sku" id="product_sku" class="form-control" 
+                                               placeholder="Product SKU">
+                                           </div>
+                                           <div class="form-group">
+                                                <label for="product_vendor_sku">Vendor SKU</label>
+                                                <input type="text" name="product_vendor_sku" id="product_vendor_sku" class="form-control" 
+                                                placeholder="Product Vendor SKU">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_weight_unit ">Product Weight Unit</label>
+                                                <select name="product_weight_unit" id="product_weight_unit" class="form-control form-control-sm">
+                                                    <option value="" selected disabled>Units</option>
+                                                    <option value="kg">Kg</option>
+                                                    <option value="ml">ml</option>
+                                                    <option value="l">L</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_weight">Product Weight</label>
+                                                <input type="number" name="product_weight" id="product_weight" class="form-control" 
+                                                placeholder="Product Vendor SKU">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_weight_unit ">Product Dimensions Unit</label>
+                                                <select name="product_weight_unit" id="product_weight_unit" class="form-control form-control-sm">
+                                                    <option value="" selected disabled>Units</option>
+                                                    <option value="mm">mm</option>
+                                                    <option value="mm">cm</option>
+                                                    <option value="mm">m</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Product Dimensions</label>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <label for="product_length">Length</label>
+                                                        <input type="number" name="product_length" id="product_length" class="form-control" 
+                                                        placeholder="Length">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <label for="product_width">Width</label>
+                                                        <input type="number" name="product_width" id="product_width" class="form-control" 
+                                                        placeholder="Width">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <label for="product_height">Length</label>
+                                                        <input type="number" name="product_height" id="product_height" class="form-control" 
+                                                        placeholder="Height">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_region ">Product Region</label>
+                                                <select name="product_region" id="product_region" class="form-control form-control-sm">
+                                                    <option value="" selected disabled>Regions</option>
+                                                    <option value="nakuru">Nakuru</option>
+                                                    <option value="nairobi">Nairobi</option>
+                                                    <option value="eldoret">Eldoret</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_gender">Product Gender</label>
+                                                <select name="product_gender" id="product_gender" class="form-control form-control-sm">
+                                                    <option value="" selected disabled>Genders</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="all">All</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_supplier">Product Supplier</label>
+                                                <select name="product_supplier" id="product_supplier" class="form-control form-control-sm">
+                                                    <option value="" selected disabled>Supplier</option>
+                                                    <option value="supplier_1">Supplier 1</option>
+                                                    <option value="supplier_2">Supplier 2</option>
+                                                    <option value="supplier_n">Supplier n</option>
+                                                </select>
+                                            </div>  
+                                        </div>
+                                        <div id="stocking" class="mb-3 py-2">
+                                            <h4 class="text-primary">Stocking</h4>
+                                            <p class="lead">This section includes product stock information such as the minimum  and maximum stock thresholds
+                                                and the current available stock.
+                                            </p>
+                                            <div class="form-group">
+                                                <label for="product_min_stock">Product Minimum Stock</label>
+                                                <input type="number" name="product_min_stock" id="product_min_stock" class="form-control" 
+                                               placeholder="Min Stock">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_stock">Product Stock</label>
+                                                <input type="number" name="product_stock" id="product_stock" class="form-control" 
+                                               placeholder="Product Stock">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_max_stock">Product Maximum Stock</label>
+                                                <input type="number" name="product_max_stock" id="product_max_stock" class="form-control" 
+                                               placeholder="Max Stock">
+                                            </div> 
+                                         </div>
+                                         <div id="pricing" class="mb-3 py-2">
+                                            <h4 class="text-primary">Pricing</h4>
+                                            <p class="lead">This section includes product price information such as the purchasing pricing, selling price, 
+                                                sales taxes and the discount available in shilling if product is on offer.
+                                            </p>
+                                            <div class="form-group">
+                                                <label for="product_purchase_price">Product Purchase Price</label>
+                                                <input type="number" name="product_purchase_price" id="product_purchase_price" class="form-control" 
+                                               placeholder="Purchase Price">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_sales_tax">Product Sales Tax</label>
+                                                <input type="number" name="product_sales_tax" id="product_sales_tax" class="form-control" 
+                                               placeholder="Sales Tax">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_on_offer">Product On Offer</label>
+                                                <div class="radio-group">
+                                                    <div>
+                                                        <label>Yes</label>
+                                                        <input class="btn btn-sm" type="radio" name="product_on_offer" id="on_offer" value="yes">
+                                                    </div>
+                                                    <div>
+                                                        <label for="no-offer">No</label>
+                                                        <input class="btn btn-sm" type="radio" name="product_on_offer" id="no_offer" value="no">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_discount">Product Discount</label>
+                                                <input type="number" name="product_discount" id="product_discount" class="form-control" 
+                                               placeholder="Discount">
+                                            </div>  
+                                         </div>
+                                         <div id="desc" class="mb-3 py-2">
+                                            <h4 class="text-primary">Features & Description</h4>
+                                            <p class="lead">This section includes product detailed information such as the cart description and 
+                                                usage texts and the features.
+                                            </p>
+                                            <div class="form-group">
+                                                <label>Product Features</label>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-4">
+                                                        <label for="feature_name">Feature</label>
+                                                        <select name="feature_name" id="feature_name" class="form-control form-control-sm">
+                                                            <option value="" selected disabled>Feature</option>
+                                                            <option value="color">Color</option>
+                                                            <option value="size">Size</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-md-4">
+                                                        <label for="option">Option</label>
+                                                        <select name="option" id="option" class="form-control form-control-sm">
+                                                            <option value="" selected disabled>Option</option>
+                                                            <option value="black">Back</option>
+                                                            <option value="gray">Gray</option>
+                                                            <option value="yellow">Yellow</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 my-1">
+                                                        <ul id="features" class="list-inline p-2">
+                                                            <li class="list-inline-item feature">
+                                                                <span class="feature-name">Color</span>
+                                                                <span class="feature-option">Black</span>
+                                                                <span class="close">&times;</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_cart_desc">Product Cart Description</label>
+                                                <textarea type="number" name="product_cart_desc" id="product_cart_desc" class="form-control" 
+                                               placeholder="Cart Description" rows="3" maxlength="200"></textarea>
+                                               <p class="form-text text-info">Max 200 characters</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_short_desc">Product Short Description</label>
+                                                <textarea type="number" name="product_short_desc" id="product_short_desc" class="form-control" 
+                                               placeholder="Short Description" rows="7" maxlength="700"></textarea>
+                                               <p class="form-text text-info">Max 700 characters</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_short_desc">Product Long Description</label>
+                                                <textarea type="number" name="product_long_desc" id="product_long_desc" class="form-control" 
+                                               placeholder="Long Description" rows="10" ></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_usage">Product Usage</label>
+                                                <textarea type="number" name="product_usage" id="product_usage" class="form-control" 
+                                               placeholder="Product Usage" rows="10" ></textarea>
+                                            </div>
+                                         </div>
+                                         <div id="images" class="mb-3 py-2">
+                                            <h4 class="text-primary">Images</h4>
+                                            <p class="lead">This section includes product display image and other images
+                                            </p>
+                                            <div class="images">
+                                                <div class="image image-display">
+                                                    <img src="" alt="">
+                                                    <div class='top-right my-1'>
+                                                        <input type='file'  name='file' accept='image/*' 
+                                                        class='d-none' ></input>
+                                                        <div class='btn-group btn-group-sm'>
+                                                            <button type='button' class='btn btn-outline-primary btn-sm'>
+                                                                <i class='fa fa-edit'></i>
+                                                            </button>
+                                                            <button type='button' id='upload-btn' class='btn btn-outline-success btn-sm'>
+                                                                <i class='fa fa-upload'></i>
+                                                            </button>
+                                                            <button type='button' class='btn btn-outline-danger btn-sm'>
+                                                                <i class='fa fa-trash'></i>
+                                                            </button>   
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="others">
+                                                    <div class="image image-other">
+                                                        <img src="" alt="">
+                                                        <div class='top-right my-1'>
+                                                            <input type='file'  name='image_1' accept='image/*' 
+                                                            class='d-none' ></input>
+                                                            <div class='btn-group btn-group-sm'>
+                                                                <button type='button' class='btn btn-outline-primary btn-sm'>
+                                                                    <i class='fa fa-edit'></i>
+                                                                </button>
+                                                                <button type='button' id='upload-btn' class='btn btn-outline-success btn-sm'>
+                                                                    <i class='fa fa-upload'></i>
+                                                                </button>
+                                                                <button type='button' class='btn btn-outline-danger btn-sm'>
+                                                                    <i class='fa fa-trash'></i>
+                                                                </button>   
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="image image-other">
+                                                        <img src="" alt="">
+                                                        <div class='top-right my-1'>
+                                                            <input type='file'  name='image_2' accept='image/*' 
+                                                            class='d-none' ></input>
+                                                            <div class='btn-group btn-group-sm'>
+                                                                <button type='button' class='btn btn-outline-primary btn-sm'>
+                                                                    <i class='fa fa-edit'></i>
+                                                                </button>
+                                                                <button type='button' id='upload-btn' class='btn btn-outline-success btn-sm'>
+                                                                    <i class='fa fa-upload'></i>
+                                                                </button>
+                                                                <button type='button' class='btn btn-outline-danger btn-sm'>
+                                                                    <i class='fa fa-trash'></i>
+                                                                </button>   
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="image image-other">
+                                                        <img src="" alt="">
+                                                        <div class='top-right my-1'>
+                                                            <input type='file'  name='image_3' accept='image/*' 
+                                                            class='d-none' ></input>
+                                                            <div class='btn-group btn-group-sm'>
+                                                                <button type='button' class='btn btn-outline-primary btn-sm'>
+                                                                    <i class='fa fa-edit'></i>
+                                                                </button>
+                                                                <button type='button' id='upload-btn' class='btn btn-outline-success btn-sm'>
+                                                                    <i class='fa fa-upload'></i>
+                                                                </button>
+                                                                <button type='button' class='btn btn-outline-danger btn-sm'>
+                                                                    <i class='fa fa-trash'></i>
+                                                                </button>   
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="image image-other">
+                                                        <img src="" alt="">
+                                                        <div class='top-right my-1'>
+                                                            <input type='file'  name='image_4' accept='image/*' 
+                                                            class='d-none' ></input>
+                                                            <div class='btn-group btn-group-sm'>
+                                                                <button type='button' class='btn btn-outline-primary btn-sm'>
+                                                                    <i class='fa fa-edit'></i>
+                                                                </button>
+                                                                <button type='button' id='upload-btn' class='btn btn-outline-success btn-sm'>
+                                                                    <i class='fa fa-upload'></i>
+                                                                </button>
+                                                                <button type='button' class='btn btn-outline-danger btn-sm'>
+                                                                    <i class='fa fa-trash'></i>
+                                                                </button>   
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         </div>
+                                        <button type="submit" class="btn btn-success btn-block">Save Product</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="admin-footer">
+            <p class="lead">Copyright &copy; 2021</p>
+            <p>Designed & Developed By 
+                <a href="mailto:siranjofuw@gmail.com">siranjofuw@gmail.com</a>
+            </p>
+        </footer>
+    </div>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/chartjs/Chart.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>E-Commerce Dashboard</title>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <header class="admin-header">
+            <div class="nav-toggler">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="search">
+                <form class="form-inline" action="#" name="search-form" id='search-form'>
+                    <input type="search" class="form-control" id="search" name="search"
+                    placeholder="Search">
+                    <button type="submit" class="btn search-btn"  id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="notifications">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" title="Pending Orders">
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="New Customers">
+                            <i class="fa fa-user-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="Unread Messages">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="./images/user.png" alt="">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="admin-nav">
+            <div class="nav-header">
+                <h1>E-COMMERCE</h1>
+                <div class="nav-close">
+                    <i class="fa fa-close"></i>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <h3>Dashboards</h3>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Products</a>
+                </li>
+                <h3>Products</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Discounts</a>
+                </li>
+                <li class="nav-item active">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Products</a>
+                </li>
+                <h3>Category</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-object-group"></i>
+                    <a href="#">View Categories</a>
+                </li>
+                <h3>Orders</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Draft Order</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cogs"></i>
+                    <a href="#">Process Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Orders</a>
+                </li>
+                <h3>Payments & Shipping</h3>
+                <li class="nav-item">
+                    <i class="fa fa-bank"></i>
+                    <a href="#">Payments</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-ship"></i>
+                    <a href="#">Shipping</a>
+                </li>
+                <h3>Suppliers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-user"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Users</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Customers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Customers</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Customer</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-heartbeat"></i>
+                    <a href="#">Customer Wishlists</a>
+                </li>
+                <h3>Reports</h3>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Stock Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cart-plus"></i>
+                    <a href="#">Order Reports</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="pull-left d-flex">
+                                    <p>Category</p>
+                                    <select class="btn btn-sm mx-2 btn-secondary" name="category" id="category">
+                                        <option value="bags">Bags</option>
+                                        <option value="bags">Bags</option>
+                                        <option value="bags">Bags</option>
+                                        <option value="bags">Bags</option>
+                                    </select>
+                                    <div class="radio-group">
+                                        <div>
+                                            <label for="on-offer">On Offer</label>
+                                            <input class="btn btn-sm" type="radio" name="on-offer" id="on-offer" value="on-offer">
+                                        
+                                        </div>
+                                        <div>
+                                            <label for="no-offer">No Offer</label>
+                                            <input class="btn btn-sm" type="radio" name="on-offer" id="no-offer" value="no-offer">
+                                        </div>
+                                        <div>
+                                            <label for="all">All</label>
+                                            <input class="btn btn-sm" type="radio" name="on-offer" id="all" value="all">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="btn-group">
+                                        <select class="btn btn-primary btn-sm" name="select" id="select">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="select">Select All</option>
+                                            <option value="unselect">Unselect</option>
+
+                                        </select>
+                                        <button class="btn btn-sm btn-success" id="add-btn">Add New</button>
+                                        <button class="btn btn-sm btn-danger" id="delete-btn">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-responsive-md table-bordered">
+                                    <thead class="bg-dark text-light">
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" class="products" name="products" id="products">
+                                            </th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Stock</th>
+                                            <th>Category</th>
+                                            <th>Price(Ksh)</th>
+                                            <th>On Offer</th>
+                                            <th>Discount</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" class="product" name="product-1" id="product-1">
+                                            </td>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-success btn-sm">Edit</button>
+                                                    <button class="btn btn-danger btn-sm">Trash</button>
+                                                    <button class="btn btn-secondary btn-sm">Share</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" class="product" name="product-1" id="product-1">
+                                            </td>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-success btn-sm">Edit</button>
+                                                    <button class="btn btn-danger btn-sm">Trash</button>
+                                                    <button class="btn btn-secondary btn-sm">Share</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" class="product" name="product-1" id="product-1">
+                                            </td>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-success btn-sm">Edit</button>
+                                                    <button class="btn btn-danger btn-sm">Trash</button>
+                                                    <button class="btn btn-secondary btn-sm">Share</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="admin-footer">
+            <p class="lead">Copyright &copy; 2021</p>
+            <p>Designed & Developed By 
+                <a href="mailto:siranjofuw@gmail.com">siranjofuw@gmail.com</a>
+            </p>
+        </footer>
+    </div>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/chartjs/Chart.min.js"></script>
+</body>
+</html>

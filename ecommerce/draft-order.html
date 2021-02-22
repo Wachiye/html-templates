@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>E-Commerce Dashboard</title>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <header class="admin-header">
+            <div class="nav-toggler">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="search">
+                <form class="form-inline" action="#" name="search-form" id='search-form'>
+                    <input type="search" class="form-control" id="search" name="search"
+                    placeholder="Search">
+                    <button type="submit" class="btn search-btn"  id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="notifications">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" title="Pending Orders">
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="New Customers">
+                            <i class="fa fa-user-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="Unread Messages">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="./images/user.png" alt="">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="admin-nav">
+            <div class="nav-header">
+                <h1>E-COMMERCE</h1>
+                <div class="nav-close">
+                    <i class="fa fa-close"></i>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <h3>Dashboards</h3>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Products</a>
+                </li>
+                <h3>Products</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Discounts</a>
+                </li>
+                <li class="nav-item ">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Products</a>
+                </li>
+                <h3>Category</h3>
+                <li class="nav-item ">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-object-group"></i>
+                    <a href="#">View Categories</a>
+                </li>
+                <h3>Orders</h3>
+                <li class="nav-item active">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Draft Order</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cogs"></i>
+                    <a href="#">Process Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Orders</a>
+                </li>
+                <h3>Payments & Shipping</h3>
+                <li class="nav-item">
+                    <i class="fa fa-bank"></i>
+                    <a href="#">Payments</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-ship"></i>
+                    <a href="#">Shipping</a>
+                </li>
+                <h3>Suppliers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-user"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Users</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Customers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Customers</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Customer</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-heartbeat"></i>
+                    <a href="#">Customer Wishlists</a>
+                </li>
+                <h3>Reports</h3>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Stock Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cart-plus"></i>
+                    <a href="#">Order Reports</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <div class="pull-left d-flex">
+                                    <select name="category" id="category">
+                                        <option value="" selected disabled>Select Category</option>
+                                        <option value="beddings">Beddings</option>
+                                        <option value="grocery">Grocery</option>
+                                        <option value="shoes">Shoes</option>
+                                    </select>
+
+                                </div>
+                                <div class="pull-right">
+                                    <button class="btn btn-warning btn-sm " data-toggle="collapse" data-target="#cart">
+                                        View Cart
+                                        <span class="badge badge-pill">7</span>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="card-body">
+                                <div id="cart" class="collapse">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card cart-card h-100">
+                                                <div class="card-header">
+                                                    <div class="pull-left">Your Cart Items</div>
+                                                    <div class="pull-right">
+                                                        <div class="btn-group">
+                                                            <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#cart">
+                                                                Add More
+                                                            </button>
+                                                            <button class="btn  btn-secondary btn-sm">
+                                                                Empty Cart
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body p-0">
+                                                    <table class="table table-bordered cart">
+                                                        <tr>
+                                                            <th>Image</th>
+                                                            <th>Details</th>
+                                                            <th>Quantity</th>
+                                                            <th>@ Price</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="image-col">
+                                                                <div class="w-100 h-100">
+                                                                    <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td class="details-col">
+                                                                <a href="#">Sumsang Laptop Notebook 340PcDU</a>
+                                                                <p class="stock small"><span>23</span> items in stock</p>
+                                                                <p class="small price-list">
+                                                                    <span class="price has-discount">Ksh 49, 000</span>
+                                                                </p>
+                                                            </td>
+                                                            <td class="size-col">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-preppend">
+                                                                        <button class="btn btn-sm">
+                                                                            <i class="fa fa-minus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input type="text" class="form-control " value="0">
+                                                                    <div class="input-group-preppend">
+                                                                        <button class="btn btn-sm">
+                                                                            <i class="fa fa-plus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="price-col">4000</td>
+                                                            <td class="action-col">
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-primary">
+                                                                        View
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-danger">
+                                                                        Remove
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="image-col">
+                                                                <div class="w-100 h-100">
+                                                                    <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td class="details-col">
+                                                                <a href="#">Sumsang Laptop Notebook 340PcDU</a>
+                                                                <p class="stock small"><span>23</span> items in stock</p>
+                                                                <p class="small price-list">
+                                                                    <span class="price has-discount">Ksh 49, 000</span>
+                                                                </p>
+                                                            </td>
+                                                            <td class="size-col">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-preppend">
+                                                                        <button class="btn btn-sm">
+                                                                            <i class="fa fa-minus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input type="text" class="form-control " value="0">
+                                                                    <div class="input-group-preppend">
+                                                                        <button class="btn btn-sm">
+                                                                            <i class="fa fa-plus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="price-col">4000</td>
+                                                            <td class="action-col">
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-primary">
+                                                                        View
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-danger">
+                                                                        Remove
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="image-col">
+                                                                <div class="w-100 h-100">
+                                                                    <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td class="details-col">
+                                                                <a href="#">Sumsang Laptop Notebook 340PcDU</a>
+                                                                <p class="stock small"><span>23</span> items in stock</p>
+                                                                <p class="small price-list">
+                                                                    <span class="price has-discount">Ksh 49, 000</span>
+                                                                </p>
+                                                            </td>
+                                                            <td class="size-col">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-preppend">
+                                                                        <button class="btn btn-sm">
+                                                                            <i class="fa fa-minus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input type="text" class="form-control " value="0">
+                                                                    <div class="input-group-preppend">
+                                                                        <button class="btn btn-sm">
+                                                                            <i class="fa fa-plus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="price-col">4000</td>
+                                                            <td class="action-col">
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-primary">
+                                                                        View
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-danger">
+                                                                        Remove
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <button class="btn btn-block cta-btn">
+                                                                    Add More
+                                                                </button>
+                                                            </td>
+                                                            <td class="total text-md-right" colspan="3">
+                                                                Total: <span>Ksh 4, 000</span>
+                                                            </td>
+                                                            
+                                                            <td>
+                                                                <button class="btn btn-block cta-btn">Checkout</button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-sm table-bordered table-responsive-md">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Stock</th>
+                                            <th>Category</th>
+                                            <th>Price(Ksh)</th>
+                                            <th>On Offer</th>
+                                            <th>Discount</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-warning btn-sm">
+                                                        <i class="fa fa-cart-plus"></i>
+                                                    </button>
+                                                 </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-warning btn-sm">
+                                                        <i class="fa fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-warning btn-sm">
+                                                        <i class="fa fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="./images/products/bag/women_bag_2.png" alt="" width="64">
+                                            </td>
+                                            <td>Women's Travel Bag</td>
+                                            <td>57</td>
+                                            <td>Bags</td>
+                                            <td>3500.00</td>
+                                            <td>
+                                                <input type="checkbox" class="product offer yes" disabled checked>
+                                            </td>
+                                            <td>500.00</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm">View</button>
+                                                    <button class="btn btn-warning btn-sm">
+                                                        <i class="fa fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="pagination">
+                                    <li class="page-item active">
+                                        <a href="?page=1" class="page-link ">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="?page=2" class="page-link">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="?page=3" class="page-link">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="?page=4" class="page-link">
+                                            4
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="?page=5" class="page-link">
+                                            5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Customer Details
+                                </h3>
+                                <form class="form-inline" action="" method="get">
+                                    <input class="form-control mb-2" type="search" name="search_customer" id="search_customer">
+                                    <button type="submit" class="btn mx-2 mb-2 btn-primary">Search</button>
+                                 </form>
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="customer_name">Customer Name</label>
+                                        <input type="text" name="customer_name" id="customer_name" class="form-control ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customer_email">Customer Email</label>
+                                        <input type="text" name="customer_email" id="customer_email" class="form-control ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customer_phone">Customer Phone</label>
+                                        <input type="text" name="customer_phone" id="customer_phone" class="form-control ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customer_billing_address">Customer Billing Address</label>
+                                        <input type="text" name="customer_billing_address" id="customer_billing_address" class="form-control ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customer_shipping_address">Customer Shipping Address</label>
+                                        <input type="text" name="customer_shipping_address" id="customer_shipping_address" class="form-control ">
+                                    </div>
+                                    <button class="btn btn-sm btn-primary" type="submit">Submit Order</button>
+                                    <button class="btn btn-sm btn-secondary" type="button">Save as Draft</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="admin-footer">
+            <p class="lead">Copyright &copy; 2021</p>
+            <p>Designed & Developed By 
+                <a href="mailto:siranjofuw@gmail.com">siranjofuw@gmail.com</a>
+            </p>
+        </footer>
+    </div>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/chartjs/Chart.min.js"></script>
+</body>
+</html>

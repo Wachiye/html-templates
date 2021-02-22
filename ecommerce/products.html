@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Online Shop</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="site-title">E-COMMERCE</h2>
+                </div>
+                <div class="col-6">
+                    <div class="navbar">
+                        <ul class="navbar-nav ml-auto top-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-bottom">
+                <button type="button" class="btn border btn-sm d-lg-none navbar-toggle"
+                    data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div id="navbar-menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./about-us.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./products.html" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <div id="categories" class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Shoes</a>
+                                <a class="dropdown-item" href="#">Beddings</a>
+                                <a class="dropdown-item" href="#">Grocery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./blog.html" class="nav-link">Blog</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <ul class="navbar-nav ml-auto nav-right">
+                    <li class="nav-item nav-right-item" title="Search">
+                        <a href="#search" id="search-toggle" class="nav-link">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right-item d-lg-none" title="Filter">
+                        <a href="#filter" id="filter-toggle" class="nav-link" >
+                            <i class="fa fa-filter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right-item" title="Preview Cart">
+                        <a href="#" class="nav-link" onclick="$('#cart-preview').toggleClass('d-none');">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <span class="badge">0</span>
+                     </li>
+                    <div id="cart-preview" class="d-none">
+                        <div class="card bg-light shadow rounded-top">
+                            <div class="card-header">
+                                <h5 class="pull-left">
+                                    <span>1</span> Items in cart</h5>
+                                <button class="btn add-to-cart btn-sm pull-right">Continue Shopping</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Price(Ksh)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Total Price</th>
+                                            <td colspan="3" class="text-right">2400</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Taxes</th>
+                                            <td colspan="3" class="text-right">100</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Cost</th>
+                                            <td colspan="3" class="text-right">2500</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="cart-footer p-2">
+                                <button class="btn btn-block btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="products-main" id="main">
+        <div class="container search p-3 d-none">
+            <div class="card bg-transparent border-0">
+                <div class="card-header bg-transparent">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="search" name="search" id="search"
+                            placeholder="Search ..." class="form-control">
+                        </div>
+                        <small class="form-text text-black-50">
+                            <span class="search-total">36</span> items found
+                        </small>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush search-items">
+                        <li class="list-group-item py-0">
+                            <a href="./product.html" 
+                                class="d-inline-flex align-items-center">
+                                <img src="./images/products/bag/suitcase_1.png" alt=""
+                                width="64" height="64" class="img-thumbnail mr-2">
+                                <div>
+                                    <h6 class="card-title mr-2">Product Name here
+                                        (Ksh <span class="price">1230</span>) -- 
+                                        <span class="stock"> 23</span> in stock
+                                    </h6>
+                                    <p class="small">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut dolorem nostrum error ex nemo at!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                     </ul>
+                </div>
+            </div>
+            
+        </div>
+        <nav class="breadcrumb breads">
+            <a href="#" class="breadcrumb-item">Home</a>
+            <a href="#" class="breadcrumb-item">Products</a>
+            <a href="#" class="breadcrumb-item active">Blo-pos-title-here</a>
+        </nav>
+        <div class="products-panel">
+            <div class="navigation">
+                <div class="nav-container">
+                    <div class="filter">
+                        <div class="filter">
+                            <h5>Filter</h5>
+                            <form action="#" method="get">
+                                <div class="form-group">
+                                    <label for="price">By Price</label>
+                                    <select name="price" id="price" 
+                                        class="form-control form-control-sm">
+                                        <option value="0-3000">0 - 3000</option>
+                                        <option value="3001-6000">3001 - 6000</option>
+                                        <option value="6001-9000">6001 - 9000</option>
+                                        <option value="9001-12000">9001 - 12000</option>
+                                        <option value="12001-15000">12001 - 15000</option>
+                                        <option value=">15000">> 15000</option>
+                                        <option value="all" selected >All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="size">By Size</label>
+                                    <select name="size" id="size" 
+                                        class="form-control form-control-sm">
+                                        <option value="XS">XS</option>
+                                        <option value="S">S</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="M">M</option>
+                                        <option value="XXL">XX</option>
+                                        <option value="4-6">4-6</option>
+                                        <option value="6-9">6-9</option>
+                                        <option value=">9">> 9</option>
+                                        <option value="all">All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color">By Color</label>
+                                    <select name="color" id="color" 
+                                        class="form-control form-control-sm">
+                                        <option value="black">Black</option>
+                                        <option value="white">White</option>
+                                        <option value="red">Red</option>
+                                        <option value="green">Green</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="all">All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">By Gender</label>
+                                    <select name="gender" id="gender" 
+                                        class="form-control form-control-sm">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="all">All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="brand">By Brand</label>
+                                    <select name="brand" id="brand" 
+                                        class="form-control form-control-sm">
+                                        <option value="adidas">Adidas</option>
+                                        <option value="nike">nike</option>
+                                        <option value="puma">Puma</option>
+                                        <option value="all">all</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-sm btn-primary" type="submit">
+                                    <i class="fa fa-filter"></i> Apply
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid products-container">
+                <div id="products" class="row products">
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/shoes/converse_yellow.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Men's Shoes Converse</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price">Ksh 2500</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/camera.jpg" alt="">
+                            </div><div class="card-body">
+                                <h5 class="card-title">HD Camera</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price has-discount">Ksh 4000</span>
+                                    <span class="price discount">Ksh 2500</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/watch.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Wrist Smart Watch</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-black-50"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-black-50"><i class="fa fa-star "></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price">Ksh 1600</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/external-hard-drive.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">ExternaL HD</h4>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price has-discount">Ksh 6000</span>
+                                    <span class="price discount">Ksh 5000</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/laptop_notebook_1.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">EliteBook 840 series Laptop</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price has-discount">Ksh 200</span>
+                                    <span class="price discount">Ksh 100</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/t_shirts/black.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Men's black T-shirt</h5>
+                                <ul class="list-inline ranking">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/t_shirts/green.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Men's Green T-shirt</h5>
+                                <ul class="list-inline ranking">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/dresses/dress_1.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Women's dress Black</h5>
+                                <ul class="list-inline ranking">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <ul class="pagination">
+                        <li class="page-item active">
+                            <a href="?page=1" class="page-link ">
+                                1
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="?page=2" class="page-link">
+                                2
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="?page=3" class="page-link">
+                                3
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="?page=4" class="page-link">
+                                4
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="?page=5" class="page-link">
+                                5
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 partners">
+                    <h5>IN PARTNERSHIP WITH</h5>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="./images/logos/mpesa.png" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="./images/logos/paypal.png" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="./images/logos/kcb.png" alt="">
+                        </div>
+                    </div>
+                    <p>
+                        <i class="fa fa-dot-circle-o"></i>
+                        Secure Online Payment
+                        <i class="fa fa-dot-circle-o"></i>
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>E-Commerce Website</h5>
+                    <p class="lead">Shop with us.Save More</p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-phone"></i>
+                                +254712345678
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                ecommerce@domain.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <p>Designed & Developed by
+                        <a href="mailto:siranjofuw@gmail.com">Wachiye Siranjofu</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

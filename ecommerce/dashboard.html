@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>E-Commerce Dashboard</title>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <header class="admin-header">
+            <div class="nav-toggler">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="search">
+                <form class="form-inline" action="#" name="search-form" id='search-form'>
+                    <input type="search" class="form-control" id="search" name="search"
+                    placeholder="Search">
+                    <button type="submit" class="btn search-btn"  id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="notifications">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" title="Pending Orders">
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="New Customers">
+                            <i class="fa fa-user-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="Unread Messages">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="./images/user.png" alt="">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="admin-nav">
+            <div class="nav-header">
+                <h1>E-COMMERCE</h1>
+                <div class="nav-close">
+                    <i class="fa fa-close"></i>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <h3>Dashboards</h3>
+                <li class="nav-item active">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Products</a>
+                </li>
+                <h3>Products</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Discounts</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-user"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Products</a>
+                </li>
+                <h3>Category</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-object-group"></i>
+                    <a href="#">View Categories</a>
+                </li>
+                <h3>Orders</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Draft Order</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cogs"></i>
+                    <a href="#">Process Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Orders</a>
+                </li>
+                <h3>Payments & Shipping</h3>
+                <li class="nav-item">
+                    <i class="fa fa-bank"></i>
+                    <a href="#">Payments</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-ship"></i>
+                    <a href="#">Shipping</a>
+                </li>
+                <h3>Suppliers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-user"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Users</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Customers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Customers</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Customer</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-heartbeat"></i>
+                    <a href="#">Customer Wishlists</a>
+                </li>
+                <h3>Reports</h3>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Stock Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cart-plus"></i>
+                    <a href="#">Order Reports</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <div class="greetings">
+                <img src="./images/user.png" alt="">
+                <div class="greetings-text">
+                    <h1 class="title">Hi Wachiye Siranjofu</h1>
+                    <p class="message">Welcome to your admin dashboard</p>
+                </div>
+            </div>
+            <div class="updates">
+                <h2 class="title">Updates</h2>
+                <div class="cards">
+                    <a class="card update card1">
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">Users</h3>
+                            <p class="message">245</p>
+                        </div>
+                    </a>
+                    <a class="card update card2">
+                        <div class="icon">
+                            <i class="fa fa-database"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">Stock</h3>
+                            <p class="message">5450</p>
+                        </div>
+                    </a>
+                    <a class="card update card3">
+                        <div class="icon">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">Orders</h3>
+                            <p class="message">99</p>
+                        </div>
+                    </a>
+                    <a class="card update card4">
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">Purchases</h3>
+                            <p class="message">45000</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="cards">
+                    <a class="card update card2">
+                        <div class="icon">
+                            <i class="fa fa-cart-plus"></i>
+                        </div>
+                        <div class="info">
+                            <h5 class="title">Pending Orders</h5>
+                            <p class="message">24</p>
+                        </div>
+                    </a>
+                    <a class="card update card3">
+                        <div class="icon">
+                            <i class="fa fa-ship"></i>
+                        </div>
+                        <div class="info">
+                            <h5 class="title">Shipping</h5>
+                            <p class="message">46</p>
+                        </div>
+                    </a>
+                    <a class="card update card4">
+                        <div class="icon">
+                            <i class="fa fa-database"></i>
+                            <i class="fa fa-arrow-down"></i>
+                        </div>
+                        <div class="info">
+                            <h5 class="title">Under-Stoked</h5>
+                            <p class="message">99</p>
+                        </div>
+                    </a>
+                    <a class="card update card1">
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <div class="info">
+                            <h5 class="title">Unpaid</h5>
+                            <p class="message">15000</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="main-cards">
+                <div class="card main-card purchase-analysis">
+
+                </div>
+                <div class="card today">
+                    <div class="card-body">
+                        <h3 class="card-title">Today's Summary</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="#">
+                                    Items Sold: <span>235</span>
+                                </a>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">
+                                    Orders made: <span>23</span>
+                                </a>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">
+                                    Pending Orders: <span>8</span>
+                                </a>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">
+                                    Orders Processed: <span>15</span>
+                                </a>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">
+                                    Income: <span>43000</span>
+                                </a>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">
+                                    New customers: <span>10</span>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="most-viewed-today card">
+                    <div class="card-body">
+                        <h3 class="card-title">Top 5 Most Viewed Items Today</h3>
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Views</th>
+                                    <th>Orders</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="./images/products/shoes/converse_yellow.png" alt="">
+                                    </td>
+                                    <td>Men's Converse Yellow</td>
+                                    <td>Shoes</td>
+                                    <td>Ksh 800</td>
+                                    <td>250</td>
+                                    <td>100</td>
+                                    <th>
+                                        <a href="#">View</a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="./images/products/sweaters/sweater_1.png" alt="">
+                                    </td>
+                                    <td>Men's Blue Casual sweater</td>
+                                    <td>Sweater</td>
+                                    <td>Ksh 1200</td>
+                                    <td>93</td>
+                                    <td>15</td>
+                                    <th>
+                                        <a href="#">View</a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="./images/products/shoes/vans_blue_red.png" alt="">
+                                    </td>
+                                    <td>Vans Blue Red 42</td>
+                                    <td>Shoes</td>
+                                    <td>Ksh 800</td>
+                                    <td>90</td>
+                                    <td>23</td>
+                                    <th>
+                                        <a href="#">View</a>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="best-selling-items card">
+                    <div class="card-body">
+                        <div class="card-title">5 Best Selling Products</div>
+                        <ul class="list-group list-group-item">
+                            <li class="list-group-item d-flex">
+                                <img src="./images/products/electronics/camera.jpg" alt="" width="35">
+                                <h5>48MP HD Camera</h5>
+                                <a href="#">
+                                    View
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <img src="./images/products/electronics/camera.jpg" alt="" width="35">
+                                <h5>48MP HD Camera</h5>
+                                <a href="#">
+                                    View
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <img src="./images/products/electronics/camera.jpg" alt="" width="35">
+                                <h5>48MP HD Camera</h5>
+                                <a href="#">
+                                    View
+                                </a>
+                            </li>
+                        </ul>    
+                            
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="admin-footer">
+            <p class="lead">Copyright &copy; 2021</p>
+            <p>Designed & Developed By 
+                <a href="mailto:siranjofuw@gmail.com">siranjofuw@gmail.com</a>
+            </p>
+        </footer>
+    </div>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="./assets/chartjs/Chart.min.js"></script>
+</body>
+</html>

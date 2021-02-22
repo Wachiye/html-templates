@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>E-Commerce Dashboard</title>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <header class="admin-header">
+            <div class="nav-toggler">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="search">
+                <form class="form-inline" action="#" name="search-form" id='search-form'>
+                    <input type="search" class="form-control" id="search" name="search"
+                    placeholder="Search">
+                    <button type="submit" class="btn search-btn"  id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="notifications">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" title="Pending Orders">
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="New Customers">
+                            <i class="fa fa-user-plus"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" title="Unread Messages">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge">8</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="./images/user.png" alt="">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="admin-nav">
+            <div class="nav-header">
+                <h1>E-COMMERCE</h1>
+                <div class="nav-close">
+                    <i class="fa fa-close"></i>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <h3>Dashboards</h3>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Products</a>
+                </li>
+                <h3>Products</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Product</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Discounts</a>
+                </li>
+                <li class="nav-item ">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Products</a>
+                </li>
+                <h3>Category</h3>
+                <li class="nav-item ">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Category</a>
+                </li>
+                <li class="nav-item active">
+                    <i class="fa fa-object-group"></i>
+                    <a href="#">View Categories</a>
+                </li>
+                <h3>Orders</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Draft Order</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cogs"></i>
+                    <a href="#">Process Orders</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-eye"></i>
+                    <a href="#">View Orders</a>
+                </li>
+                <h3>Payments & Shipping</h3>
+                <li class="nav-item">
+                    <i class="fa fa-bank"></i>
+                    <a href="#">Payments</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-ship"></i>
+                    <a href="#">Shipping</a>
+                </li>
+                <h3>Suppliers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-user"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Users</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit User</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-users"></i>
+                    <a href="#">View Users</a>
+                </li>
+                <h3>Customers</h3>
+                <li class="nav-item">
+                    <i class="fa fa-plus"></i>
+                    <a href="#">Add Customers</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-edit"></i>
+                    <a href="#">Edit Customer</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-heartbeat"></i>
+                    <a href="#">Customer Wishlists</a>
+                </li>
+                <h3>Reports</h3>
+                <li class="nav-item">
+                    <i class="fa fa-database"></i>
+                    <a href="#">Stock Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-dollar"></i>
+                    <a href="#">Sales Report</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-cart-plus"></i>
+                    <a href="#">Order Reports</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 offset-md-1">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>List of Categories</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex">
+                                        <div class="image mr-2">
+                                            <img width="70px" src="./images/products/bag/suitcase_1.png" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <h5>Category Name</h5>
+                                            <p>
+                                                <small>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores libero culpa distinctio totam quidem iusto necessitatibus. Iure nostrum voluptate voluptatem.
+                                                </small>
+                                            </p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    Tag 1 <span class="pull-right">&times;</span>
+                                                </li>
+                                            </ul>
+                                            <p class="lead">345 Items are in this Categories</p>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                <button type="button" class="btn btn-success btn-sm">Deactivate</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Remove</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex">
+                                        <div class="image mr-2">
+                                            <img width="70px" src="./images/products/bag/suitcase_1.png" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <h5>Category Name</h5>
+                                            <p>
+                                                <small>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores libero culpa distinctio totam quidem iusto necessitatibus. Iure nostrum voluptate voluptatem.
+                                                </small>
+                                            </p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    Tag 1 <span class="pull-right">&times;</span>
+                                                </li>
+                                            </ul>
+                                            <p class="lead">345 Items are in this Categories</p>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                <button type="button" class="btn btn-success btn-sm">Deactivate</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Remove</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="admin-footer">
+            <p class="lead">Copyright &copy; 2021</p>
+            <p>Designed & Developed By 
+                <a href="mailto:siranjofuw@gmail.com">siranjofuw@gmail.com</a>
+            </p>
+        </footer>
+    </div>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/chartjs/Chart.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Online Shop</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="site-title">E-COMMERCE</h2>
+                </div>
+                <div class="col-6">
+                    <div class="navbar">
+                        <ul class="navbar-nav ml-auto top-nav">
+                            <li class="nav-item">
+                                <a class="nav-link default" href="#">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-bottom">
+                <button type="button" class="btn border btn-sm d-lg-none navbar-toggle"
+                    data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div id="navbar-menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="./index.html" class="nav-link">HOME</a></li>
+                        <li class="nav-item"><a href="./products.html" class="nav-link">PRODUCTS</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">CATEGORIES</a>
+                            <div id="categories" class="dropdown-menu">
+                                <a class="dropdown-item" href="#">T-shirts</a>
+                                <a class="dropdown-item" href="#">Trousers</a>
+                                <a class="dropdown-item" href="#">Beddings</a>
+                                <a class="dropdown-item" href="#">Electronic</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./new_arivals.html" class="nav-link">NEW ARRIVALS</a></li>
+                        <li class="nav-item"><a href="./most_popular.html" class="nav-link">MOST POPULAR</a></li>
+                        <li class="nav-item"><a href="" class="nav-link"></a></li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">CONTACT US</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <ul class="navbar-nav ml-auto nav-right">
+                    <li class="nav-item nav-right-item">
+                        <a href="./index.html" class="nav-link">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right-item">
+                        <a href="./cart.html" class="nav-link">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <span class="badge">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-1">
+                    <div class="checkout-card">
+                        <ul class=" nav nav-pills checkout-points" role="tablist">
+                            <li class="nav-item checkout-point">
+                                <a href="#" class="nav-link done" id="auth-tab"
+                                data-toggle="tab" data-target="#auth"
+                                aria-controls="#auth" aria-selected="true">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                    Auth
+                                </a>
+                            </li>
+                            <li class="nav-item checkout-point">
+                                <a class="nav-link active" href="#" id="info-tab"
+                                data-toggle="tab" data-target="#info"
+                                aria-controls="#info" aria-selected="false">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                    Information
+                                </a>
+                            </li>
+                            <li class="nav-item checkout-point">
+                                <a class="nav-link " href="#" id="payment-tab"
+                                data-toggle="tab" data-target="#payment"
+                                aria-controls="#payment" aria-selected="true">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                    Payment
+                                </a>
+                            </li>
+                            <li class="checkout-point">
+                                <a class="nav-link " href="#" id="complete-tab"
+                                data-toggle="tab" data-target="#complete"
+                                aria-controls="#complete" aria-selected="true">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                    Complete
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="checkout-panel" class="card tab-content">
+                        <div class="tab-panel fade " id="auth" role="tabpanel"
+                        aria-labelledby="auth-tab">
+                            Auth
+                        </div>
+                        <div class="tab-panel fade show active" id="info" role="tabpanel"
+                        aria-labelledby="info-tab">
+                            Info
+                        </div>
+                        <div class="tab-panel fade" id="payment" role="tabpanel"
+                        aria-labelledby="payment-tab">
+                            Payment
+                        </div>
+                        <div class="tab-panel fade" id="complete" role="tabpanel"
+                        aria-labelledby="complete-tab">
+                            Complete
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <footer></footer>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

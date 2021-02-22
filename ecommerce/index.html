@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/slick-master/slick/slick.css">
+    <link rel="stylesheet" href="./assets/slick-master/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Online Shop</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="site-title">E-COMMERCE</h2>
+                </div>
+                <div class="col-6">
+                    <div class="navbar">
+                        <ul class="navbar-nav ml-auto top-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="modal" data-target="#signin" href="#signin">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="modal" data-target="#signup" href="#">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-bottom">
+                <button type="button" class="btn border btn-sm d-lg-none navbar-toggle"
+                    data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div id="navbar-menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./about-us.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./products.html" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <div id="categories" class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Shoes</a>
+                                <a class="dropdown-item" href="#">Beddings</a>
+                                <a class="dropdown-item" href="#">Grocery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./blog.html" class="nav-link">Blog</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <ul class="navbar-nav ml-auto nav-right">
+                    <li class="nav-item nav-right-item">
+                        <a href="#search" class="nav-link" id="search-btn">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right-item">
+                        
+                        <a href="#" class="nav-link" onclick="$('#cart-preview').toggleClass('d-none');">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <span class="badge">0</span>
+                        <div id="cart"></div>
+                    </li>
+                    <div id="cart-preview" class="d-none">
+                        <div class="card bg-light shadow rounded-top">
+                            <div class="card-header">
+                                <h5 class="pull-left">
+                                    <span>1</span> Items in cart</h5>
+                                <button class="btn add-to-cart btn-sm pull-right">Continue Shopping</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Price(Ksh)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Total Price</th>
+                                            <td colspan="3" class="text-right">2400</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Taxes</th>
+                                            <td colspan="3" class="text-right">100</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Cost</th>
+                                            <td colspan="3" class="text-right">2500</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="cart-footer p-2">
+                                <button class="btn btn-block btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="index-main">
+        <div class="container search p-3 d-none">
+            <div class="card bg-transparent border-0">
+                <div class="card-header bg-transparent">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="search" name="search" id="search"
+                            placeholder="Search ..." class="form-control">
+                        </div>
+                        <small class="form-text text-black-50">
+                            <span class="search-total">36</span> items found
+                        </small>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush search-items">
+                        <li class="list-group-item py-0">
+                            <a href="./product.html" 
+                                class="d-inline-flex align-items-center">
+                                <img src="./images/products/bag/suitcase_1.png" alt=""
+                                width="64" height="64" class="img-thumbnail mr-2">
+                                <div>
+                                    <h6 class="card-title mr-2">Product Name here
+                                        (Ksh <span class="price">1230</span>) -- 
+                                        <span class="stock"> 23</span> in stock
+                                    </h6>
+                                    <p class="small">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut dolorem nostrum error ex nemo at!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                     </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 site">
+                    <!-- carousel -->
+                    <div id="myCarousel" class="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                            <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/bg-laptop.png" alt="First slide" class="w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/bg-keyboard.png" alt="Second slide" class="w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/bg-comps.png" alt="Third slide" class="w-100">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel"
+                            data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control-next" href="#myCarousel"
+                            data-slide="next">&rsaquo;</a>
+                    </div>
+                    <!-- /carousel -->
+
+                    <!-- site name -->
+                    <div class="site-name">
+                        <h1>E-COMMERCE WEBSITE</h1>
+                        <p>Shop with us it. Save More</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="well">
+                        <div class="top-selling-items">
+                            <h4 class="section-header">Top Selling Items</h4>
+                            <div class="items">    
+                                <a href="#" class="item">
+                                    <img class="item-image" src="./images/products/electronics/speaker_4.png" alt="">
+                                    <div>
+                                        <h6 class="item-name">1500W DEFENDER SPEAKER WITH BLUETOOH</h6>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                            <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                            <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                            <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                            <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                        </ul>
+                                        <p class="price-list">
+                                            <span class="price pull-left">Ksh 4500</span>
+                                            <span class="price pull-right">13 in stock</span>
+                                        </p>
+                                    </div>
+                                    
+                                </a>
+                                <a href="#" class="item">
+                                    <img class="item-image" src="./images/products/electronics/watch.jpg" alt="">
+                                    <h6 class="item-name">Golden Waterproof Luxury Watch</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                    </ul>
+                                    <p class="price-list">
+                                        <span class="price pull-left">Ksh 5500</span>
+                                        <span class="price pull-right">9 in stock</span>
+                                    </p>
+                                </a>
+                                <a href="#" class="item">
+                                    <img class="item-image" src="./images/products/bag/suitcase_4.png" alt="">
+                                    <h6 class="item-name">Golden Yellow Chinese Leather Travel bag </h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                    </ul>
+                                    <p class="price-list">
+                                        <span class="price pull-left">Ksh 6500</span>
+                                        <span class="price pull-right">10 in stock</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offers">
+                <h2 class="section-header">Our SUPER Offers</h2>
+                <div class="offer-list">
+                    <div class="offer">
+                       <img src="./images/courier.png" alt="">
+                        <div class="desc">
+                            <h3>FREE DELIVERY WITHIN NAKURU</h3>
+                            <p>We are offering free delivery for orders 
+                                <span>above 5OK</span> within Nakuru
+                            </p>
+                            <div class="actions">
+                                <button class="btn add-to-cart">Shop Now</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="offer">
+                        <img src="./images/gift.png" alt="">
+                         <div class="desc">
+                             <h3>FREE GIFT FOR VALENTINES</h3>
+                             <p>Get a free gift this valentine if you become among the first 10 customers to make orders on valentines day. 
+                             </p>
+                             <div class="actions">
+                                 <div class="time">
+                                     <div class="days">
+                                         <span id="days">4 D</span>
+                                     </div>
+                                     <div class="hours">
+                                        <span id="hours">10 H</span>
+                                    </div>
+                                    <div class="mins">
+                                        <span id="mins">56 M</span>
+                                    </div>
+                                    <div class="sec">
+                                        <span id="sec">52 S</span>
+                                    </div>
+                                 </div>
+                             </div>
+                         </div> 
+                     </div>
+                </div>
+            </div>
+            <div class="subscribe">
+                <h2>Subscribe</h2>
+                <p>Know about our latest offers and updates right in your inbox ahead of others</p>
+                <form class="form-inline" action="#" method="post" id="subscribe-form" name="subscribe-form">
+                    <input type="text" name="username" id="username" 
+                    class="form-control my-1" placeholder="Username">
+                    <input type="email" name="email" id="email" 
+                    class="form-control my-1" placeholder="Email">
+                    <button class="btn cta-btn" type="submit" name="subscribe" value="subscribe">
+                        <i class="fa fa-heart"></i> Subscribe
+                    </button>
+                </form>
+                
+            </div>
+           <div class="category-list">
+               <h3>Quick Links</h3>
+               <div class="categories">
+                    <div class="category">
+                        <div class="card h-100">
+                            <div class="card-img-top">
+                                <img src="./images/bg-comps.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="cart-title category-name">Electronics</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="card h-100">
+                            <div class="card-img-top">
+                                <img src="./images/products/beddings/bed_6.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="cart-title category-name">Beddings</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="card h-100">
+                            <div class="card-img-top">
+                                <img src="./images/products/dresses/dress_10.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="cart-title category-name">Dresses</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="card h-100">
+                            <div class="card-img-top">
+                                <img src="./images/products/shoes/converse_yellow.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="cart-title category-name">Shoes</h6>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               
+           </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 partners">
+                    <h5>IN PARTNERSHIP WITH</h5>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="./images/logos/mpesa.png" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="./images/logos/paypal.png" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="./images/logos/kcb.png" alt="">
+                        </div>
+                    </div>
+                    <p>
+                        <i class="fa fa-dot-circle-o"></i>
+                        Secure Online Payment
+                        <i class="fa fa-dot-circle-o"></i>
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>E-Commerce Website</h5>
+                    <p class="lead">Shop with us.Save More</p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-phone"></i>
+                                +254712345678
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                ecommerce@domain.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <p>Designed & Developed by
+                        <a href="mailto:siranjofuw@gmail.com">Wachiye Siranjofu</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- sign in div -->
+    <div id="signin" class="modal show fade" tab-index="-1">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <img src="#" alt="" >
+                    <h2>User Authentication</h2>
+                    <button class="btn close" data-dismiss="modal" data-target="#login">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" name="login-form" id="login-form">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control form-control-sm" name="email"
+                                 id="email" placeholder="Email address">
+                                 <div class="input-group-append">
+                                     <span class="input-group-text">
+                                         <i class="fa fa-user"></i>
+                                     </span>
+                                 </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control form-control-sm" name="password"
+                                 id="password" placeholder="Password">
+                                 <div class="input-group-append">
+                                     <span class="input-group-text">
+                                         <i class="fa fa-user-secret"></i>
+                                     </span>
+                                 </div>
+                            </div>
+                            <p>
+                                <a href="#">Forgot Password?</a>
+                            </p>
+                            <div class="form-group">
+                                <button class="btn btn-sm btn-warning text-light">
+                                    <i class="fa fa-sign-in"></i> Sign in
+                                </button>
+                                <a href="#" class="pull-right">Sign up</a>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /sign in div -->
+
+    <!-- sign up div -->
+    <div id="signup" class="modal show fade" tab-index="-1">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <img src="#" alt="" >
+                    <h2>Create Customer Account</h2>
+                    <button class="btn close" data-dismiss="modal" data-target="#signup">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" name="signup-form" id="signup-form">
+                        <div class="form-group">
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control form-control-sm" name="username"
+                                 id="username" placeholder="Username">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" class="form-control form-control-sm" name="email"
+                                 id="email" placeholder="Email address">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="tel" class="form-control form-control-sm" name="phone"
+                                 id="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="password" class="form-control form-control-sm" name="password"
+                                 id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="password" class="form-control form-control-sm" name="password2"
+                                 id="password2" placeholder="Re-enter Password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-sm btn-warning text-light">
+                                    <i class="fa fa-send"></i> Submit
+                                </button>
+                                <a href="#" class="pull-right">Sign up</a>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /sign up -->
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/slick-master/slick/slick.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $('.offer-list').slick({
+                dots:true,
+                arrows:false,
+                autoplay:true,
+                autoplaySpeed:2000
+            });
+            $('.categories').not('.slack-initialized').slick({
+                dots:true,
+                autoplay:true,
+                centerMode:true,
+                slidesToShow:3,
+                autoplaySpeed:2000,
+                responsive:[{
+                    breakpoint:992,
+                    settings:{
+                        dots:false,
+                        arrows:false,
+                        slidesToShow:2,
+                        slidesToScroll:2
+                    }
+                },
+                {
+                    breakpoint:768,
+                    settings:{
+                        dots:false,
+                        arrows:false,
+                        slidesToShow:1,
+                        slidesToScroll:1
+                    }
+                }]
+            });
+        });
+    </script>
+</body>
+</html>

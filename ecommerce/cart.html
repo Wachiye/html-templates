@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Online Shop</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="site-title">E-COMMERCE</h2>
+                </div>
+                <div class="col-6">
+                    <div class="navbar">
+                        <ul class="navbar-nav ml-auto top-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-bottom">
+                <button type="button" class="btn border btn-sm d-lg-none navbar-toggle"
+                    data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div id="navbar-menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="./index.html" class="nav-link">HOME</a></li>
+                        <li class="nav-item"><a href="./products.html" class="nav-link">PRODUCTS</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">CATEGORIES</a>
+                            <div id="categories" class="dropdown-menu">
+                                <a class="dropdown-item" href="#">T-shirts</a>
+                                <a class="dropdown-item" href="#">Trousers</a>
+                                <a class="dropdown-item" href="#">Beddings</a>
+                                <a class="dropdown-item" href="#">Electronic</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./new_arivals.html" class="nav-link">NEW ARRIVALS</a></li>
+                        <li class="nav-item"><a href="./most_popular.html" class="nav-link">MOST POPULAR</a></li>
+                        <li class="nav-item"><a href="" class="nav-link"></a></li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">CONTACT US</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <ul class="navbar-nav ml-auto nav-right">
+                    <li class="nav-item nav-right-item">
+                        <a href="./index.html" class="nav-link">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right-item">
+                        <a href="./cart.html" class="nav-link">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <span class="badge">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card cart-card">
+                        <div class="card-header">
+                            <div class="pull-left">Your Cart Items</div>
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm">
+                                        Add More
+                                    </button>
+                                    <button class="btn  btn-secondary btn-sm">
+                                        Empty Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table table-bordered cart">
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Details</th>
+                                    <th>Quantity</th>
+                                    <th>@ Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                                <tr>
+                                    <td class="image-col">
+                                        <div class="w-100 h-100">
+                                            <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td class="details-col">
+                                        <a href="#">Sumsang Laptop Notebook 340PcDU</a>
+                                        <p class="stock small"><span>23</span> items in stock</p>
+                                        <p class="small price-list">
+                                            <span class="price has-discount">Ksh 49, 000</span>
+                                        </p>
+                                    </td>
+                                    <td class="size-col">
+                                        <div class="input-group">
+                                            <div class="input-group-preppend">
+                                                <button class="btn btn-sm">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <input type="text" class="form-control form-control-sm" value="0">
+                                            <div class="input-group-preppend">
+                                                <button class="btn btn-sm">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="price-col">4000</td>
+                                    <td class="action-col">
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-primary">
+                                                View
+                                            </button>
+                                            <button class="btn btn-sm btn-danger">
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="image-col">
+                                        <div class="w-100 h-100">
+                                            <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td class="details-col">
+                                        <a href="#">Sumsang Laptop Notebook 340PcDU</a>
+                                        <p class="stock small"><span>23</span> items in stock</p>
+                                        <p class="small price-list">
+                                            <span class="price has-discount">Ksh 49, 000</span>
+                                        </p>
+                                    </td>
+                                    <td class="size-col">
+                                        <div class="input-group">
+                                            <div class="input-group-preppend">
+                                                <button class="btn btn-sm">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <input type="text" class="form-control form-control-sm" value="0">
+                                            <div class="input-group-preppend">
+                                                <button class="btn btn-sm">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="price-col">4000</td>
+                                    <td class="action-col">
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-primary">
+                                                View
+                                            </button>
+                                            <button class="btn btn-sm btn-danger">
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="image-col">
+                                        <div class="w-100 h-100">
+                                            <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td class="details-col">
+                                        <a href="#">Sumsang Laptop Notebook 340PcDU</a>
+                                        <p class="stock small"><span>23</span> items in stock</p>
+                                        <p class="small price-list">
+                                            <span class="price has-discount">Ksh 49, 000</span>
+                                        </p>
+                                    </td>
+                                    <td class="size-col">
+                                        <div class="input-group">
+                                            <div class="input-group-preppend">
+                                                <button class="btn btn-sm">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <input type="text" class="form-control form-control-sm" value="0">
+                                            <div class="input-group-preppend">
+                                                <button class="btn btn-sm">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="price-col">4000</td>
+                                    <td class="action-col">
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-primary">
+                                                View
+                                            </button>
+                                            <button class="btn btn-sm btn-danger">
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-block cta-btn">
+                                            Add More
+                                        </button>
+                                    </td>
+                                    <td class="total text-md-right" colspan="3">
+                                        Total: <span>Ksh 4, 000</span>
+                                    </td>
+                                    
+                                    <td>
+                                        <button class="btn btn-block cta-btn">Checkout</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container my-2">
+                <h3 class="text-center">The Top 4 Most Purchased Products That Might Surprise You</h3>
+                <p class="lead text-center">83% of customers have added one of these items on their carts</p>
+                <div id="products" class="row products">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/laptop.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">HP EliteBook Laptop 840 Series</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price">Ksh 25,000</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/laptop_notebook_3.png" alt="">
+                            </div><div class="card-body">
+                                <h5 class="card-title">LENOVO Laptop 420X2</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price has-discount">Ksh 40,000</span>
+                                    <span class="price discount">Ksh 35, 500</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/laptop_notebook_2.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Sumsang Laptop Notebook 320PcDU</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-black-50"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-black-50"><i class="fa fa-star "></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price">Ksh 32,600</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="./images/products/electronics/external-hard-drive.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">ExternaL HD 500GB Black</h4>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item text-warning"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star text-black-50"></i></li>
+                                </ul>
+                                <div class="price-list">
+                                    <span class="price has-discount">Ksh 6000</span>
+                                    <span class="price discount">Ksh 5000</span>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="add-to-cart">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

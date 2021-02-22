@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/slick-master/slick/slick.css">
+    <link rel="stylesheet" href="./assets/slick-master/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Online Shop</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="site-title">E-COMMERCE</h2>
+                </div>
+                <div class="col-6">
+                    <div class="navbar">
+                        <ul class="navbar-nav ml-auto top-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="modal" data-target="#signin" href="#signin">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="modal" data-target="#signup" href="#">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-bottom">
+                <button type="button" class="btn border btn-sm d-lg-none navbar-toggle"
+                    data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div id="navbar-menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./about-us.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./products.html" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <div id="categories" class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Shoes</a>
+                                <a class="dropdown-item" href="#">Beddings</a>
+                                <a class="dropdown-item" href="#">Grocery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./blog.html" class="nav-link">Blog</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <ul class="navbar-nav ml-auto nav-right">
+                    <li class="nav-item nav-right-item">
+                        <a href="./index.html" class="nav-link">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right-item">
+                        
+                        <a href="#" class="nav-link" onclick="$('#cart-preview').toggleClass('d-none');">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <span class="badge">0</span>
+                        <div id="cart"></div>
+                    </li>
+                    <div id="cart-preview" class="d-none">
+                        <div class="card bg-light shadow rounded-top">
+                            <div class="card-header">
+                                <h5 class="pull-left">
+                                    <span>1</span> Items in cart</h5>
+                                <button class="btn add-to-cart btn-sm pull-right">Continue Shopping</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Price(Ksh)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <img src="./images/products/t_shirts/black.png" alt=""
+                                                width="35" height="35">
+                                            </td>
+                                            <td>A black T-shirt</td>
+                                            <td>800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Total Price</th>
+                                            <td colspan="3" class="text-right">2400</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Taxes</th>
+                                            <td colspan="3" class="text-right">100</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Cost</th>
+                                            <td colspan="3" class="text-right">2500</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="cart-footer p-2">
+                                <button class="btn btn-block btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="blog-main">
+        <nav class="breadcrumb breads">
+            <a href="#" class="breadcrumb-item">Home</a>
+            <a href="#" class="breadcrumb-item active">Contact Us</a>
+        </nav>
+        <h1 class="section title text-center">Contact Us</h1>
+        <div class="container">
+            <div class="row shadow p-2">
+                <div class="col-md-8">
+                    <form action="#">
+                        <div class="form-group">
+                            <p class="form-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis laborum aliquid ipsam laboriosam laudantium exercitationem.
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" class="form-control"
+                            placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" class="form-control"
+                            placeholder="Your Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Phone</label>
+                            <input type="tel" name="phone" id="phone" class="form-control"
+                            placeholder="Your Phone Number">
+                            <p class="form-text small text-info">Input form 2547xxxxxxxx</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Contacting Us</label>
+                            <input type="text" name="reason" id="reason" class="form-control"
+                            placeholder="Reason for Contacting Us">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea name="message" id="message" class="form-control"
+                            placeholder="Your Message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-sm">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent border-0 shadow-none">
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    Phone: <span class="pull-right"> +254790983123</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Email: <span class="pull-right"> siranjofuw@gmail.com</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Help Line: <span class="pull-right"> +254790983123</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Address: <span class="pull-right"> Nakuru 536, Kenya</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <p class="text-center">
+                                        <i class="fa fa-map-marker fa-2x"></i>
+                                    </p>
+                                    <div id="map"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 partners">
+                    <h5>IN PARTNERSHIP WITH</h5>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="./images/logos/mpesa.png" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="./images/logos/paypal.png" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="./images/logos/kcb.png" alt="">
+                        </div>
+                    </div>
+                    <p>
+                        <i class="fa fa-dot-circle-o"></i>
+                        Secure Online Payment
+                        <i class="fa fa-dot-circle-o"></i>
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-2x fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>E-Commerce Website</h5>
+                    <p class="lead">Shop with us.Save More</p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-phone"></i>
+                                +254712345678
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                ecommerce@domain.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <p>Designed & Developed by
+                        <a href="mailto:siranjofuw@gmail.com">Wachiye Siranjofu</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- sign in div -->
+    <div id="signin" class="modal show fade" tab-index="-1">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <img src="#" alt="" >
+                    <h2>User Authentication</h2>
+                    <button class="btn close" data-dismiss="modal" data-target="#login">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" name="login-form" id="login-form">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control form-control-sm" name="email"
+                                 id="email" placeholder="Email address">
+                                 <div class="input-group-append">
+                                     <span class="input-group-text">
+                                         <i class="fa fa-user"></i>
+                                     </span>
+                                 </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control form-control-sm" name="password"
+                                 id="password" placeholder="Password">
+                                 <div class="input-group-append">
+                                     <span class="input-group-text">
+                                         <i class="fa fa-user-secret"></i>
+                                     </span>
+                                 </div>
+                            </div>
+                            <p>
+                                <a href="#">Forgot Password?</a>
+                            </p>
+                            <div class="form-group">
+                                <button class="btn btn-sm btn-warning text-light">
+                                    <i class="fa fa-sign-in"></i> Sign in
+                                </button>
+                                <a href="#" class="pull-right">Sign up</a>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /sign in div -->
+
+    <!-- sign up div -->
+    <div id="signup" class="modal show fade" tab-index="-1">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <img src="#" alt="" >
+                    <h2>Create Customer Account</h2>
+                    <button class="btn close" data-dismiss="modal" data-target="#signup">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" name="signup-form" id="signup-form">
+                        <div class="form-group">
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control form-control-sm" name="username"
+                                 id="username" placeholder="Username">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" class="form-control form-control-sm" name="email"
+                                 id="email" placeholder="Email address">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="tel" class="form-control form-control-sm" name="phone"
+                                 id="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="password" class="form-control form-control-sm" name="password"
+                                 id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="password" class="form-control form-control-sm" name="password2"
+                                 id="password2" placeholder="Re-enter Password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-sm btn-warning text-light">
+                                    <i class="fa fa-send"></i> Submit
+                                </button>
+                                <a href="#" class="pull-right">Sign up</a>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /sign up -->
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/popper/popper.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/slick-master/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $('.offer-list').slick({
+                dots:true,
+                arrows:false,
+                autoplay:true,
+                autoplaySpeed:2000
+            });
+            $('.categories').not('.slack-initialized').slick({
+                dots:true,
+                autoplay:true,
+                centerMode:true,
+                slidesToShow:3,
+                autoplaySpeed:2000,
+                responsive:[{
+                    breakpoint:992,
+                    settings:{
+                        dots:false,
+                        arrows:false,
+                        slidesToShow:2,
+                        slidesToScroll:2
+                    }
+                },
+                {
+                    breakpoint:768,
+                    settings:{
+                        dots:false,
+                        arrows:false,
+                        slidesToShow:1,
+                        slidesToScroll:1
+                    }
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
