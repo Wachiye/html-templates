@@ -1,0 +1,60 @@
+body {
+  background-image: url(../../img/bg-underwater.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:#fff;
+}
+
+.container{
+  width: 90%;
+  height: 100vh;
+}
+
+.login-container{
+  width: 80%;
+  height: auto;
+}
+.group{
+  position: relative;
+  border: none;
+}
+.group .ico, .group .input{
+  position: absolute;
+  top: 50%;
+  height: 40px;
+  transform: translateY(-50%);
+}
+.group .ico{
+  position: absolute;
+  left:8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px 0 0 8px;
+  background: transparent;
+}
+
+.group .input{
+  position: absolute;
+  left: 48px;
+  width: 80%; 
+  height: 40px;
+  padding: 8px;
+  border-radius: 0 8px 8px 0;
+}
+
+#login-btn:hover{
+  background: #fff;
+  color: #111111;
+  border: 1px solid #111111;
+}
+
+@media only screen and (min-width: 46em){
+  .login-container{
+    width: 400px;
+  }
+  #login-btn{
+    width: 80%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,72 @@
+body{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(../../img/bg-plain.jpeg) center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-section{
+    padding:0;
+    border: none;
+
+}
+.container{
+    background-color: #efefef;
+    color: #777;
+    border-radius: 40px 0 40px 0;
+    
+}
+.container:hover{
+    box-shadow: 0 5px 20px #555;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.logo img{
+    height: 70px;
+    padding-left: 30px;
+    filter: grayscale(1);
+}
+.logo img:hover{
+    filter: grayscale(0);
+}
+h1{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom:5px;
+}
+.login-form{
+    padding: 15px;
+}
+.form-control{
+    border: none !important;
+    border-radius: 0 !important;
+
+}
+.check{
+    width: 100%;
+    display: inline-flex;
+    justify-content: start;
+    clear: both;
+
+}
+.login-btn{
+    background-color: #777;
+    color: #efefef;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    margin: auto;
+}
+.login-btn:hover{
+    background-color: #efefef;
+    color: #777;
+    border: 1px solid #777;
+}
+@media only screen and (min-width: 46em){
+    .main-section{
+        width: 500px;
+    }
+}

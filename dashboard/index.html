@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="description" content="Landing page design">
+	<meta name="keywords" content="landing, page, design, html, css, bootstrap">
+	
+	<meta name="author" content="Jeremiah Siranjofu Wachiye <siranjofuw@gmail.com>" />
+	<title>Dashboard</title>
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="./style.dashboard.css" />
+</head>
+<body>
+    <div class="container-fluid" id="main-panel">
+        <div id="nav" >
+            <div class="nav-profile text-center">
+                <img src="../img/username.png" alt="" width="70" height="70" class="img-circle" />
+                <h4 class="profile-name">Full Name
+                    <small class="profile-username">@username</small>
+                </h4> 
+            </div>
+            <hr class="my-2 bg-light">
+            <ul class="nav-list nav">
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Dashboard</a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">View Site</a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Events</a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Sermons</a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Messages
+                        <span class="badge bg-danger text-light">14</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Audience
+                        <span class="badge bg-danger text-light">8</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Donations
+                        <span class="badge bg-danger text-light">14</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Profile</a>
+                </li>
+                <li class="nav-item nav-list-item">
+                    <a href="#" class="nav-link nav-list-link">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div id="header">
+            <div id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="page-name">
+                <h6>Dashboard</h6>
+            </div>
+            <div class="pull-right mr-2 notifications">
+                <a href="#" class="btn btn-light btn-sm">Messages
+                    <span class="badge bg-danger text-light">14</span>
+                </a>
+                <a href="#" class="btn btn-light btn-sm">Audience
+                    <span class="badge bg-danger text-light">8</span>
+                </a>
+                <a href="#" class="btn btn-light btn-sm">Donations
+                    <span class="badge bg-danger text-light">14</span>
+                </a>
+                <img src="../img/username.png" alt="" class="img-circle" width="40" height="40">
+                <span class="dot-bar">...</span>
+                <div class="profile-menu tex-left ">
+                    <ul class="list-unstyled d-none">
+                        <a href="#" class="btn">Edit Details</a>
+                        <a href="#" class="btn">Change Password</a>
+                        <a href="#" class="btn">Logout</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="card bg-transparent border-info mb-2">
+                <div class="card-body">
+                    <h3 class="card-title">Updates</h3>
+                    <div class="card-text updates">
+                        <div class="update rounded h-100">
+                            <img class="img-circle" src="../img/username.png" alt="" width="35" height="35">
+                            <h6>New Users</h6>
+                            <p>35</p>
+                        </div>
+                        <div class="update rounded h-100">
+                            <img class="img-circle" src="../img/username.png" alt="" width="35" height="35">
+                            <h6>Upcoming Events</h6>
+                            <p>35</p>
+                        </div>
+                        <div class="update rounded h-100">
+                            <img class="img-circle" src="../img/username.png" alt="" width="35" height="35">
+                            <h6>Today Events</h6>
+                            <p>35</p>
+                        </div>
+                        <div class="update rounded h-100">
+                            <img class="img-circle" src="../img/username.png" alt="" width="35" height="35">
+                            <h6>New Donations</h6>
+                            <p>35</p>
+                        </div>
+                        <div class="update rounded h-100">
+                            <img class="img-circle" src="../img/username.png" alt="" width="35" height="35">
+                            <h6>New Subscribers</h6>
+                            <p>35</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-8 mb-2">
+                    <div id='donations-tracking' class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Donations Tracking</h5>
+                            <canvas id="donation-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div id="quick-analysis" class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Quick Analysis</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                All Users: 
+                                    <span class="pull-right">250</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Pastors: 
+                                    <span class="pull-right">8</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Members:
+                                    <span class="pull-right">210</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Subscribers:
+                                    <span class="pull-right">30</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Events:
+                                    <span class="pull-right">20</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Sermons:
+                                    <span class="pull-right">40</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Resources:
+                                    <span class="pull-right">50</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Donation Balance:
+                                    <span class="pull-right">50k</span>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-8 mb-1">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">Recent Donations Transaction History</h6>
+                            <div class="card-text table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <thead class="bg-dark text-light">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Amount(Ksh)</th>
+                                            <th>Transaction ID</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Wachiye Siranjofu</td>
+                                            <td>254790983123</td>
+                                            <td>500.00</td>
+                                            <td>XJT6JKI0N</td>
+                                            <td>21-11-2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wachiye Siranjofu</td>
+                                            <td>254790983123</td>
+                                            <td>500.00</td>
+                                            <td>XJT6JKI0N</td>
+                                            <td>21-11-2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wachiye Siranjofu</td>
+                                            <td>254790983123</td>
+                                            <td>500.00</td>
+                                            <td>XJT6JKI0N</td>
+                                            <td>21-11-2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wachiye Siranjofu</td>
+                                            <td>254790983123</td>
+                                            <td>500.00</td>
+                                            <td>XJT6JKI0N</td>
+                                            <td>21-11-2020</td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <td colspan="5">
+                                                <a href="#" class="btn btn-dark text-light">View All</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-1">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Application Performance</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item ">
+                                    <h6>Memory Usage</h6>
+                                    <canvas id="memory"></canvas>
+                                </li>
+                                <li class="list-group-item ">
+                                    <h6>Response Evaluation</h6>
+                                    <canvas id="response"></canvas>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p> Copyright &COPY; 
+                <script>
+                    function date(){
+                        var date = new Date();
+                        document.write (` 2020 - ${date.getFullYear()}`)
+                    }
+                    date()
+                </script>
+            </p>
+            <p class="pull-right">
+                Admin : 
+                <a class="text-decoration-none text-dark" href="mailto:siranjofuw@gmail.com?Subject=Contacting%20Admin">siranjofuw@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
